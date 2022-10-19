@@ -1,17 +1,20 @@
+package com.banco.banco.entidade;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Usuario {
+
+	@Id 
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
     private int id;
-    private String nome;
-    private String Usuario;
-    private String email;
-    private String senha;
-
-	public class getUsuario() {
-		return this.Usuario;
-	}
-
-	public void setUsuario(class Usuario) {
-		this.Usuario = Usuario;
-	}
+	private String nome;
+	private String usuario;
+	private String email;
+	private String senha;
 
 	public int getId() {
 		return this.id;
@@ -30,11 +33,11 @@ public class Usuario {
 	}
 
 	public String getUsuario() {
-		return this.Usuario;
+		return this.usuario;
 	}
 
-	public void setUsuario(String Usuario) {
-		this.Usuario = Usuario;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getEmail() {
@@ -52,5 +55,7 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	
 }
 
