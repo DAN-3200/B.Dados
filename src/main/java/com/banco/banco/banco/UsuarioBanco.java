@@ -3,6 +3,6 @@ package com.banco.banco.banco;
     import org.springframework.stereotype.repository;
     import com.banco.banco.entidade.Usuario;
 @repository
-public interface UsuraioBanco extends CrudRepository< Integer, Usuario{
+public interface UsuarioBanco extends CrudRepository< Integer, Usuario{
     
 }
