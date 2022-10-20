@@ -20,7 +20,7 @@ public class UsuarioController{
         return (List<Usuario>) acessoBanco.findAll();
     }
 
-    @GetMapping("/ususario/{id}")
+    @GetMapping("/usuario/{id}")
     public Optional<Usuario> peguePorId(@PathVariable int id){
         return acessoBanco.findById(id);
     }
