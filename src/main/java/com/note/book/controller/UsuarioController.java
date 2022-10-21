@@ -1,6 +1,7 @@
 package com.note.book.controller;
     // Tudo importação pra ultilizar Methods específicos
     import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.web.bind.annotation.DeleteMapping;
     import org.springframework.web.bind.annotation.GetMapping;
     import org.springframework.web.bind.annotation.PathVariable;
     import org.springframework.web.bind.annotation.PostMapping;
@@ -42,6 +43,16 @@ public class UsuarioController{
             u.setEmail(usuario.getSenha());
             return acessoBanco.save(u);
         });
+    }
+
+    @PutMapping("/alterar")
+    public void alterarUsuario(@PathVariable int id){
+        acessoBanco.deleteById(id);
+    }
+
+    @DeleteMapping("/deletar/{id}")
+    public void deletarUsuario(@PathVariable int id){
+        acessoBanco.deleteById(id);
     }
 
 }
