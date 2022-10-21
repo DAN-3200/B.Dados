@@ -1,5 +1,6 @@
+Caso dê erro em "git add ." use:
 ```
-Caso dê erro em "git add ." use "git config core.autocrlf"
+git config core.autocrlf
 ```
 
 **Minhas Anotações**
