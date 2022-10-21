@@ -15,7 +15,7 @@ public class Usuario {
 	private String email;
 	private String senha;
 
-	// qual a diferença de atribuir diretamente o valor e usar metodo Get e Set????
+	// Get e Set para poder inserir e pegar Dados específicos
 	public int getId() {
 		return this.id;
 	}

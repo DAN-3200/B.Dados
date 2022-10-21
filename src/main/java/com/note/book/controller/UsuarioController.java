@@ -4,7 +4,7 @@ package com.note.book.controller;
     import org.springframework.web.bind.annotation.GetMapping;
     import org.springframework.web.bind.annotation.PathVariable;
     import org.springframework.web.bind.annotation.PostMapping;
-    // import org.springframework.web.bind.annotation.PutMapping;
+    import org.springframework.web.bind.annotation.PutMapping;
     import org.springframework.web.bind.annotation.RequestBody;
     import org.springframework.web.bind.annotation.RestController;
     import com.note.book.banco.UsuarioBanco;
@@ -12,10 +12,11 @@ package com.note.book.controller;
     import java.util.List;
     import java.util.Optional;
 
+    // Mapping pecorre o Banco
 @RestController //Esqueci oq esse Arroba faz
 public class UsuarioController{
     @Autowired
-    private UsuarioBanco acessoBanco;
+    private UsuarioBanco acessoBanco; // instânciando
 
     @GetMapping("/usuarios")
     public List<Usuario> ListarUsuarios(){ // Isso é a mesma coisa de um ArrayList
@@ -32,15 +33,15 @@ public class UsuarioController{
         acessoBanco.save(NovoUsuario);
     }
 
-    // @PutMapping("/alterar/{id}")
-    // public void alterar(@PathVariable int id, @RequestBody Usuario usuario){
-    //     acessoBanco.findById(id).map(user ->{
-    //         user.setNome(usuario.getNome());
-    //         user.setUsuario(usuario.getUsuario());
-    //         user.setEmail(usuario.getEmail());
-    //         user.setEmail(usuario.getSenha());
-    //         return acessoBanco.save(user);
-    //     })
-    // }
+    @PutMapping("/alterar/{id}") 
+    public void alterar(@PathVariable int id, @RequestBody Usuario usuario){ // PathVariable - Variável de caminho; ResquestBody - Corpo de Solicitação
+        acessoBanco.findById(id).map(u ->{
+            u.setNome(usuario.getNome());
+            u.setUsuario(usuario.getUsuario());
+            u.setEmail(usuario.getEmail());
+            u.setEmail(usuario.getSenha());
+            return acessoBanco.save(u);
+        });
+    }
 
 }
