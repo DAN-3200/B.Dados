@@ -18,7 +18,7 @@ public class UsuarioController{
     private UsuarioBanco acessoBanco;
 
     @GetMapping("/usuarios")
-    public List<Usuario> ListarUsuarios(){
+    public List<Usuario> ListarUsuarios(){ // Isso é a mesma coisa de um ArrayList
         return (List<Usuario>) acessoBanco.findAll();
     }
 
