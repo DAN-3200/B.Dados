@@ -4,6 +4,7 @@ package com.note.book;
 
 @SpringBootApplication
 public class BancoApplication { // É aqui que rodamos o Bagui todo, eu acho...
+	
 	public static void main(String[] args) {
 		SpringApplication.run(BancoApplication.class, args);// O que isso faz????
 	}
