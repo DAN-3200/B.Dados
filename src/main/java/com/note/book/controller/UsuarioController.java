@@ -1,17 +1,18 @@
-package com.banco.banco.controller;
+package com.note.book.controller;
+    // Tudo importação pra ultilizar Methods específicos
     import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.web.bind.annotation.GetMapping;
     import org.springframework.web.bind.annotation.PathVariable;
     import org.springframework.web.bind.annotation.PostMapping;
-    import org.springframework.web.bind.annotation.PutMapping;
+    // import org.springframework.web.bind.annotation.PutMapping;
     import org.springframework.web.bind.annotation.RequestBody;
     import org.springframework.web.bind.annotation.RestController;
-    import com.banco.banco.banco.UsuarioBanco;
-    import com.banco.banco.entidade.Usuario;
+    import com.note.book.banco.UsuarioBanco;
+    import com.note.book.entidade.Usuario;
     import java.util.List;
     import java.util.Optional;
 
-@RestController
+@RestController //Esqueci oq esse Arroba faz
 public class UsuarioController{
     @Autowired
     private UsuarioBanco acessoBanco;

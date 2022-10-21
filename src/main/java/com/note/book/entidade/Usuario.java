@@ -1,9 +1,8 @@
-package com.banco.banco.entidade;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package com.note.book.entidade;
+	import javax.persistence.Entity;
+	import javax.persistence.GeneratedValue;
+	import javax.persistence.GenerationType;
+	import javax.persistence.Id;
 
 @Entity
 public class Usuario {
@@ -16,6 +15,7 @@ public class Usuario {
 	private String email;
 	private String senha;
 
+	// qual a diferença de atribuir diretamente o valor e usar metodo Get e Set????
 	public int getId() {
 		return this.id;
 	}
