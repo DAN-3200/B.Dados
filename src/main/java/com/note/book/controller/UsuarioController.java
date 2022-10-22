@@ -1,6 +1,7 @@
 package com.note.book.controller;
     // Tudo importação pra ultilizar Methods específicos
     import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.web.bind.annotation.CrossOrigin;
     import org.springframework.web.bind.annotation.DeleteMapping;
     import org.springframework.web.bind.annotation.GetMapping;
     import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ package com.note.book.controller;
     import java.util.Optional;
 
     // Mapping pecorre o Banco
+@CrossOrigin("*")
 @RestController //Esqueci oq esse Arroba faz
 public class UsuarioController{
     @Autowired
